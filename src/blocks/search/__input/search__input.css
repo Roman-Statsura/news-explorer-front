@@ -1,0 +1,30 @@
+.search__input {
+  flex-grow: 2;
+  outline: none;
+  max-width: 608px;
+  min-height: 64px;
+  background: #FFFFFF;
+  border: 1px solid #D1D2D6;
+  box-sizing: border-box;
+  backdrop-filter: blur(8px);
+  border-radius: 100px;
+  padding-left: 24px;
+  margin-right: -168px;
+}
+
+.search__input:active,
+.search__input:hover,
+.search__input:focus {
+  outline: none;
+}
+
+
+@media screen and (max-width: 759px) {
+  .search__input {
+      max-width: 288px;
+      width: 100%;
+      min-height: 54px;
+      margin: auto auto 16px auto;
+      flex-grow: 3;
+  }
+}

@@ -1,0 +1,19 @@
+.result__button {
+  min-width: 288px;
+  min-height: 64px;
+  font-family: Roboto, Inter , sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #1A1B22;
+  background-color: #FFFFFF;
+}
+
+
+.result__button:hover{
+  background-color: #E6E8EB;
+  cursor: pointer;
+}

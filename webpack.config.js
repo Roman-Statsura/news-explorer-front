@@ -1,17 +1,19 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const WebpackMd5Hash = require('webpack-md5-hash');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin"); // добавили плагин
-const webpack = require('webpack');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const isDev = process.env.NODE_ENV === 'development';
-
+const path = require("path");
+const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const WebpackMd5Hash = require("webpack-md5-hash");
+const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const isDev = process.env.NODE_ENV === "development";
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  entry: { main: './src/index.js' },
+  entry: {
+    main: './src/script/index.js',
+    articles: './src/script/articles.js',
+  },
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[chunkhash].js'
+    path: path.resolve(__dirname, "dist"),
+    filename: "./script/[name].[chunkhash].js",
   },
   module: {
     rules: [
@@ -19,106 +21,82 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
+          loader: "babel-loader",
         },
-        // test: /\.js$/, // include .js files
-        // enforce: "pre", // preload the jshint loader
-        // exclude: /node_modules/, // exclude any and all files in the `node_modules folder`
-        // use: [
-        //     {
-        //     loader: "babel-loader",
-        //       options: {
-        //         presets: [
-        //           "@babel/preset-env"
-        //         ],
-        //         plugins: [
-        //           "@babel/plugin-syntax-dynamic-import",
-        //           "@babel/plugin-proposal-class-properties"
-        //         ]
-        //       }
-        //     }
-        // ]
+      },
+      {
+        test: /\.(eot|ttf|woff|woff2)$/,
+        loader: "file-loader?name=./vendor/[name].[ext]",
       },
       {
         test: /\.css$/i,
-        use: [
-                        (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
-                        {
-                          loader:'css-loader',
-                          options: {
-                              importLoaders: 2
-                          }
-                      },
-                        'postcss-loader'
-                ]
-      },
-     {
-        test: /\.(png|jpe?g|gif|svg)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: "./images/[name].[ext]",
-              esModule: false
-            }
+        use: [(isDev ? 'style-loader' : { loader: MiniCssExtractPlugin.loader, options: { publicPath: '../' } }),
+        {
+          loader: 'css-loader',
+          options: {
+            importLoaders: 2
+          }
         },
-       {
-            loader: 'image-webpack-loader',
+          'postcss-loader',
+        ],
+      },
+      {
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        use: [
+          "file-loader",
+          {
+            loader: "image-webpack-loader",
             options: {
               mozjpeg: {
                 progressive: true,
-                quality: 65
               },
               optipng: {
-                optimizationLevel: 4,
+                enabled: false,
               },
               pngquant: {
-                quality: [0.65, 0.90],
-                speed: 4
+                quality: [0.65, 0.9],
+                speed: 4,
               },
               gifsicle: {
                 interlaced: false,
               },
-              // the webp option will enable WEBP
               webp: {
-                quality: 75
-              }
-            }
-                },
-          ],
+                quality: 75,
+              },
+            },
+          },
+        ],
       },
-      {
-        test: /\.(eot|ttf|woff|woff2)$/,
-        loader: 'file-loader?name=./vendor/[name].[ext]'
-      },
-
-
-
-
-    ]
+    ],
   },
   plugins: [
-    new MiniCssExtractPlugin({ //
-      filename: 'style.[contenthash].css',
+    new MiniCssExtractPlugin({
+      filename: "styles/[name].[contenthash].css",
     }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/g,
-      cssProcessor: require('cssnano'),
+      cssProcessor: require("cssnano"),
       cssProcessorPluginOptions: {
-              preset: ['default'],
+        preset: ["default"],
       },
-      canPrint: true
-    }),
-    new webpack.DefinePlugin({
-      'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+      canPrint: true,
     }),
     new HtmlWebpackPlugin({
       inject: false,
-      template: './src/index.html',
-      filename: 'index.html'
+      template: "./src/index.html",
+      filename: "index.html",
+      chunks: ['main']
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      // hash: true,
+      template: './src/articles.html',
+      filename: 'articles.html',
+      chunks: ['articles']
     }),
     new WebpackMd5Hash(),
-
-  ]
-
+    new webpack.DefinePlugin({
+      NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+    }),
+  ],
 };

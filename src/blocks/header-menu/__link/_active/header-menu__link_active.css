@@ -1,0 +1,11 @@
+.header-menu__link_active {
+  border-bottom: #FFFFFF solid 3px;
+  display: flex;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+
+.header-menu__link_active-black {
+  border-bottom: #1A1B22 solid 3px;
+}

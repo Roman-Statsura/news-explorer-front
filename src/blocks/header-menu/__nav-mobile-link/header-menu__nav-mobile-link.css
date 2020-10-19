@@ -1,0 +1,8 @@
+.header-menu__nav-mobile-link{
+  padding: 0px;
+  margin-top: 16px;
+  margin-bottom: 0px;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}

@@ -1,0 +1,7 @@
+@import url("./__button/header-menu-auth__button.css");
+@import url("./__user-name/header-menu-auth__user-name.css");
+@import url("./__logout/header-menu-auth__logout.css");
+
+.header-menu-auth {
+  box-shadow: 0px -1px 0px 0px #d1d2d6 inset;
+}

@@ -1,0 +1,15 @@
+.user-info_container {
+  padding: 40px 0 56px 104px;
+}
+
+@media screen and (min-width: 760px) and (max-width: 1023px) {
+  .user-info_container {
+    padding: 24px 0 32px 40px;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .user-info_container {
+    padding: 8px 17px 34px 16px;
+  }
+}

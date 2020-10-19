@@ -1,0 +1,35 @@
+@import url('./_active/header-menu__link_active.css');
+
+.header-menu__link{
+  display:inline-block;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+  text-decoration: none;
+  margin-right: 32px;
+  color: #FFFFFF;
+  margin-top: 30px;
+  height: 60%;
+}
+
+.header-menu__link:hover{
+  cursor: pointer;
+}
+
+@media screen  and (min-width: 760px) and (max-width: 1023px){
+  .header-menu__link{
+      font-size: 16px;
+      margin-right: 16px;
+      margin-top: 28px;
+  }
+  }
+
+  @media screen and (max-width: 759px){
+      .header-menu__link{
+          display: none;
+      }
+  }

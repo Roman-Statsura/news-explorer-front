@@ -1,0 +1,30 @@
+.user-info__tag{
+  font-family: Roboto, Inter, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+}
+
+.user-info__numtag{
+  font-family: Roboto, Inter, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+}
+
+
+@media screen  and (min-width: 760px) and (max-width: 1023px){
+  .user-info__tag{
+      font-size: 14px;
+      font-weight: 700;
+  }
+
+  .user-info__numtag{
+      font-weight: 700;
+      font-size: 14px;
+  }
+}

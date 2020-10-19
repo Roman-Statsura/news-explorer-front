@@ -1,0 +1,9 @@
+/* @import url('./_left/popup__text_left.css'); */
+
+.popup__text {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 14px;
+  text-align: center;
+  margin: 16px 0 0;
+  line-height: 17px;
+}

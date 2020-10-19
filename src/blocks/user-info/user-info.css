@@ -1,0 +1,10 @@
+@import url('./__subtitle/user-info__subtitle.css');
+@import url('./__title/user-info__title.css');
+@import url('./__text/user-info__text.css');
+@import url('./__tag/user-info__tag.css');
+@import url('./_container/user-info_container.css');
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}

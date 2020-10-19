@@ -1,0 +1,26 @@
+.user-info__title {
+  font-family: Roboto Slab, Inter, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+  color: #1a1b22;
+  max-width: 530px;
+}
+
+@media screen and (min-width: 760px) and (max-width: 1023px) {
+  .user-info__title {
+    font-size: 30px;
+    line-height: 34px;
+    max-width: 336px;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .user-info__title {
+    font-size: 30px;
+    line-height: 34px;
+    max-width: 288px;
+    margin-bottom: 16px;
+  }
+}

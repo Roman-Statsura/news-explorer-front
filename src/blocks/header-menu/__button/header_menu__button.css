@@ -1,0 +1,25 @@
+.header-menu__button {
+  background: none;
+  font-family: Roboto, Inter, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  align-self: center;
+  min-height: 48px;
+  width: 176px;
+}
+@media screen and (min-width: 760px) and (max-width: 1023px) {
+  .header-menu__button {
+    font-size: 16px;
+    min-height: 40px;
+    width: 152px;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .header-menu__button {
+    display: none;
+  }
+}

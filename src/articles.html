@@ -17,75 +17,73 @@
 
   <body class="body">
     <div class="root">
-      <header class="header">
-        <div class="header-menu">
+      <header class="header header_white">
+        <div class="header-menu header-menu-auth">
           <div class="logo logo_margin">
-            <h1 class="logo__text">NewsExplorer</h1>
+            <h1 class="logo__text logo__text_black">NewsExplorer</h1>
           </div>
           <nav class="header-menu__nav-container">
             <ul class="header-menu__nav">
               <li>
-                <a class="header-menu__link header-menu__link_active" href="#"
-                  >Главная</a
-                >
+                <a class="header-menu__link header-menu__link_auth" href="./index.html">Главная</a>
               </li>
               <li>
-                <a class="header-menu__link header-menu__article" href=""
-                  >Сохранённые статьи</a
-                >
+                <a class="header-menu__link header-menu__link_auth header-menu__link_active-black" href="#">Сохранённые статьи</a>
               </li>
             </ul>
-            <button class="header-menu__button button user-info__button">Авторизоваться</button>
-          </nav>
-          <button class="header-menu__nav-mobile-toggle-button"></button>
-          <div class="header-menu__nav-mobile">
-            <nav class="header-menu__nav-mobile-content">
-                <ul class = "header-menu__nav-mobile-link">
-                <li><a class="header-menu__link header-menu__link_mobile" href="#">Главная</a></li>
-                <li><a class="header-menu__link header-menu__article header-menu__link_mobile" href="./articles.html">Сохранённые
-                    статьи</a></li>
-                </ul>
-                <button class="header-menu__button button header-menu__button_mobile">Авторизоваться
-                </button>
 
-            </nav>
-          </div>
+            <button class="header-menu-auth__button header-menu__button button">
+              <span class="header-menu-auth__user-name">Грета</span>
+                    <img src="<%=require('./images/exit.svg').default%>" alt="выход"
+                         class="header-menu-auth__logout">
+            </button>
+          </nav>
+          <button class="header-menu__nav-mobile-toggle-button header-menu__nav-mobile-toggle-button_black">
+          </button>
         </div>
 
-        <section class="search">
-          <h2 class="search__title">Что творится в мире?</h2>
-          <p class="search__text">
-            Находите самые свежие статьи на любую тему и сохраняйте в своем
-            личном кабинете
-          </p>
-          <form  class="search__form" name="new-search">
-            <input
-              type="text"
-              name="tag"
-              placeholder="Введите тему новости"
-              class="search__input"
-              id="inputtag"
-            />
-            <button class="button search__button" type="submit">Искать</button>
-          </form>
+        <section class="user-info user-info_container">
+          <p class="user-info__subtitle">Сохранённые статьи</p>
+            <h1 class="user-info__title"><span class="user-info__title-name">Грета</span>, у вас
+                <span class="user-info__num">5</span> сохранённых статей</h1>
+            <p class="user-info__text">По ключевым словам: <span
+                    class="user-info__tag">Природа, Тайга</span> и <span class="user-info__numtag">2-м</span> другим
+            </p>
         </section>
       </header>
 
+      <section class="loading-block">
+        <div class="loading-block__container container">
+          <div class="loading-block__preloader"></div>
+          <p class="loading-block__text">Идет поиск новостей...</p>
+        </div>
+      </section>
+
+      <section class="loading-block">
+        <div class="loading-block__container container">
+          <img class="loading-block__image" src="<%=require('../src/images/not-found.svg').default%>" alt="ничего не найдено" />
+          <p class="loading-block__title">Ничего не найдено</p>
+          <p class="loading-block__text">
+            К сожалению по вашему запросу ничего не найдено.
+          </p>
+        </div>
+      </section>
+
       <main class="main">
-        <section class="result result_container">
-          <h2 class="result__title">Результаты поиска</h2>
+        <section class="result result_container-articles">
+
           <div class="result__articles">
             <div class="article">
               <div class="article__item">
                 <img
-                  src="<%=require('./images/card-1.png').default%>"
+                  src="<%=require('./images/image_21.png').default%>"
                   alt="картинка новости"
                   class="article__image"
                 />
-                <div class="article__login article__login_displ-none">
-                  Войдите, чтобы сохранить статьи
+                <div class="article__login article__login_displ-none">Убрать из сохранённых
                 </div>
-                <div class="article__icon"></div>
+                <div class="article__label">Природа</div>
+                <div class="article__icon article__delete"></div>
               </div>
               <span class="article__date">2 августа, 2019</span>
               <h3 class="article__title">Национальное достояние - парки</h3>
@@ -94,83 +92,100 @@
                 начала складываться система национальных парков – охраняемых
                 территорий, где и сегодня каждый может приобщиться к природе.
               </p>
-              <a class="article__source link" href="lenta.ru" target="_blank"
-                >Лента.ру</a
-              >
+              <a class="article__source link" href="lenta.ru" target="_blank">ДЗЕН</a>
             </div>
 
             <div class="article">
               <div class="article__item">
                 <img
-                  src="<%=require('./images/card-2.png').default%>"
+                  src="<%=require('./images/image_22.png').default%>"
                   alt="картинка новости"
                   class="article__image"
                 />
-                <div class="article__login article__login_displ-none">
-                  Войдите, чтобы сохранить статьи
+                <div class="article__login article__login_displ-none">Убрать из сохранённых
                 </div>
-                <div class="article__icon"></div>
+                <div class="article__label">Природа</div>
+                <div class="article__icon article__delete"></div>
               </div>
               <span class="article__date">2 августа, 2019</span>
-              <h3 class="article__title">
-                Лесные огоньки: история одной фотографии
-              </h3>
+              <h3 class="article__title">Лесные огоньки: история одной фотографии</h3>
               <p class="article__text">
-                Фотограф отвлеклась от освещения суровой политической реальности
-                Мексики, чтобы запечатлеть ускользающую красоту одного из
-                местных чудес природы.
+                Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного
+из местных чудес природы.
               </p>
-              <a class="article__source link" href="lenta.ru" target="_blank"
-                >Медуза</a
-              >
+              <a class="article__source link" href="lenta.ru" target="_blank">АФИША</a>
             </div>
 
             <div class="article">
               <div class="article__item">
                 <img
-                  src="<%=require('./images/card-3.png').default%>"
+                  src="<%=require('./images/image_23.png').default%>"
                   alt="картинка новости"
                   class="article__image"
                 />
-                <div class="article__login article__login_displ-none">
-                  Войдите, чтобы сохранить статьи
+                <div class="article__login article__login_displ-none">Убрать из сохранённых
                 </div>
-                <div class="article__icon"></div>
+                <div class="article__label">Тайга</div>
+                <div class="article__icon article__delete"></div>
               </div>
               <span class="article__date">2 августа, 2019</span>
-              <h3 class="article__title">
-                «Первозданная тайга»: новый фотопроект Игоря Шпиленка
-              </h3>
+              <h3 class="article__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
               <p class="article__text">
-                Знаменитый фотограф снимает первозданные леса России, чтобы
-                рассказать о необходимости их сохранения. В этот раз он
-                отправился в Двинско-Пинежскую тайгу, где...
+                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
+                начала складываться система национальных парков – охраняемых
+                территорий, где и сегодня каждый может приобщиться к природе.
               </p>
-              <a class="article__source link" href="lenta.ru" target="_blank"
-                >РИА</a
-              >
+              <a class="article__source link" href="lenta.ru" target="_blank">МЕДИАЗОНА</a>
             </div>
+
+            <div class="article">
+              <div class="article__item">
+                <img
+                  src="<%=require('./images/image_21.png').default%>"
+                  alt="картинка новости"
+                  class="article__image"
+                />
+                <div class="article__login article__login_displ-none">Убрать из сохранённых
+                </div>
+                <div class="article__label">Парки</div>
+                <div class="article__icon article__delete"></div>
+              </div>
+              <span class="article__date">2 августа, 2019</span>
+              <h3 class="article__title">Национальное достояние - парки</h3>
+              <p class="article__text">
+                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
+                начала складываться система национальных парков – охраняемых
+                территорий, где и сегодня каждый может приобщиться к природе.
+              </p>
+              <a class="article__source link" href="lenta.ru" target="_blank">ДЗЕН</a>
+            </div>
+
+            <div class="article">
+              <div class="article__item">
+                <img
+                  src="<%=require('./images/image_22.png').default%>"
+                  alt="картинка новости"
+                  class="article__image"
+                />
+                <div class="article__login article__login_displ-none">Убрать из сохранённых
+                </div>
+                <div class="article__label">Фотография</div>
+                <div class="article__icon article__delete"></div>
+              </div>
+              <span class="article__date">2 августа, 2019</span>
+              <h3 class="article__title">Лесные огоньки: история одной фотографии</h3>
+              <p class="article__text">
+                Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного
+из местных чудес природы.
+              </p>
+              <a class="article__source link" href="lenta.ru" target="_blank">ДЗЕН</a>
+            </div>
+
           </div>
 
-          <button class="result__button button">Показать еще</button>
+
         </section>
 
-        <section class="loading-block">
-          <div class="loading-block__container container">
-            <div class="loading-block__preloader"></div>
-            <p class="loading-block__text">Идет поиск новостей...</p>
-          </div>
-        </section>
-
-        <section class="loading-block">
-          <div class="loading-block__container container">
-            <img class="loading-block__image" src="<%=require('../src/images/not-found.svg').default%>" alt="ничего не найдено" />
-            <p class="loading-block__title">Ничего не найдено</p>
-            <p class="loading-block__text">
-              К сожалению по вашему запросу ничего не найдено.
-            </p>
-          </div>
-        </section>
 
         <section class="author">
           <picture class="author__avatar">
@@ -204,6 +219,8 @@
             </p>
           </div>
         </section>
+
+        <!-- для появления попапов им необходимо добавить стиль  popup_is-opened-->
         <div class="popup">
           <div class="popup__content">
             <img class="popup__close" src="<%=require('./images/popup-close-white.svg').default%>" alt="Закрыть">
@@ -332,7 +349,7 @@
           <ul class="footer__socials">
             <li>
               <a
-                href="https://github.com/Roman-Statsura"
+                href="https://github.com/kravcov7"
                 class="footer__social"
                 target="_blank"
                 ><img
@@ -357,5 +374,6 @@
       </footer>
     </div>
     <script src="<%=htmlWebpackPlugin.files.js%>"></script>
+
   </body>
 </html>

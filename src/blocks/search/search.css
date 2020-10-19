@@ -1,0 +1,23 @@
+@import url("./__button/search__button.css");
+@import url("./__title/search__title.css");
+@import url("./__text/search__text.css");
+@import url("./__input/search__input.css");
+@import url("./__form/search__form.css");
+
+.search {
+  margin: 80px auto 0 auto;
+  max-width: 608px;
+}
+
+@media screen and (min-width: 760px) and (max-width: 1023px) {
+  .search {
+    max-width: 448px;
+    margin: 38px auto;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .search {
+    margin: 30px auto 0px auto;
+  }
+}
