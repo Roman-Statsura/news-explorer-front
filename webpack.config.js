@@ -49,7 +49,7 @@ module.exports = {
               name: './images/[name].[ext]',
               esModule: false,
             },
-          },,
+          },
           {
             loader: "image-webpack-loader",
             options: {
