@@ -41,7 +41,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(gif|png|jpe?g|svg)$/i,
+        test: /\.(png|jpg|gif|ico|svg)$/i,
         use: [
           {
             loader: 'file-loader',
@@ -51,24 +51,8 @@ module.exports = {
             },
           },
           {
-            loader: "image-webpack-loader",
+            loader: 'image-webpack-loader',
             options: {
-              mozjpeg: {
-                progressive: true,
-              },
-              optipng: {
-                enabled: false,
-              },
-              pngquant: {
-                quality: [0.65, 0.9],
-                speed: 4,
-              },
-              gifsicle: {
-                interlaced: false,
-              },
-              webp: {
-                quality: 75,
-              },
             },
           },
         ],
