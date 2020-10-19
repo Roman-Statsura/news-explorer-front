@@ -11,13 +11,13 @@ HTML5, CSS3, Webpack, JavaScript, Git
 
 ## Функциональность
 
-### WebPack настроен и собирает проект
-### Сверстаны главная страница и страница авторизации
-### Сверстаны попапы
-### Выполнена адаптивная верстка
-### Инструкция по запуску
-### Установить Node.js
-### Клонировать репозиторий git clone https://github.com/Roman-Statsura/news-explorer-front.git
-### Установить зависимости npm i
-### npm run build запустить сборку production-билда
-### npm run dev запустить development режим
+1. WebPack настроен и собирает проект
+2. Сверстаны главная страница и страница авторизации
+3. Сверстаны попапы
+4. Выполнена адаптивная верстка
+5. Инструкция по запуску
+6. Установить Node.js
+7. Клонировать репозиторий git clone https://github.com/Roman-Statsura/news-explorer-front.git
+8. Установить зависимости npm i
+9. npm run build запустить сборку production-билда
+10. npm run dev запустить development режим

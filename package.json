@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/Roman-Statsura/news-eplorer-front/issues"
   },
-  "homepage": "https://roman-statsura.github.io/news-eplorer-front/",
+  "homepage": "https://github.com/Roman-Statsura/news-eplorer-front#readme",
   "devDependencies": {
     "@babel/cli": "^7.10.4",
     "@babel/core": "^7.10.4",
