@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/Roman-Statsura/news-eplorer-front/issues"
   },
-  "homepage": "https://github.com/Roman-Statsura/news-eplorer-front#readme",
+  "homepage": "https://roman-statsura.github.io/news-eplorer-front/",
   "devDependencies": {
     "@babel/cli": "^7.10.4",
     "@babel/core": "^7.10.4",
@@ -35,7 +35,7 @@
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.1",
     "file-loader": "^6.0.0",
-    "gh-pages": "^3.1.0",
+    "gh-pages": "~3.1.0",
     "html-webpack-plugin": "^4.3.0",
     "image-webpack-loader": "^6.0.0",
     "mini-css-extract-plugin": "^0.9.0",
