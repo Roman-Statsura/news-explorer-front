@@ -1,0 +1,8 @@
+.header-menu__nav {
+  list-style-type: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display: flex;
+  min-height: 80px;
+  height: 100%;
+}

@@ -1,0 +1,11 @@
+.footer__social {
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 759px) {
+  .footer__socials {
+    margin-left: 0px;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+}

@@ -1,0 +1,17 @@
+.header-menu__nav-container{
+  display: flex;
+  margin-right: 104px;
+}
+
+@media screen  and (min-width: 760px) and (max-width: 1023px){
+  .header-menu__nav-container{
+      margin-right: 40px;
+      min-height: 63px;
+  }
+}
+
+@media screen and (max-width: 759px){
+  .header-menu__nav-container{
+      display: none;
+  }
+}

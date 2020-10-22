@@ -1,0 +1,12 @@
+@import url(./_center/form__error_center.css);
+
+.form__error {
+  display: none;
+  position: absolute;
+  top: 55px;
+  font-size: 12px;
+  line-height: 14px;
+  color: #FF0000;
+  margin: 3px 0 0;
+  box-sizing: border-box;
+}

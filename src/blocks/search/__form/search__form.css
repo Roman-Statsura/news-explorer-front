@@ -1,0 +1,17 @@
+.search__form {
+  display: flex;
+}
+
+@media screen  and (min-width: 300px) and (max-width: 400px){
+  .search__form{
+      flex-wrap: wrap;
+  }
+}
+
+
+@media screen and (max-width: 759px){
+  .search__form{
+      flex-wrap: wrap;
+      flex-direction: column;
+  }
+}

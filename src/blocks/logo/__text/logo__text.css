@@ -1,0 +1,18 @@
+.logo__text{
+  font-family: Roboto Slab, sans-serif;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    color: white;
+    box-sizing: border-box;
+}
+
+@media screen  and (max-width: 759px) {
+  .logo__text {
+      font-size: 16px;
+      text-align: left;
+      margin: 0;
+
+  }
+}

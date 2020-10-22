@@ -1,0 +1,32 @@
+.article__delete {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../../../images/delete.svg");
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+  right: 24px;
+  top: 24px;
+  border-radius: 8px;
+}
+
+.article__delete:hover {
+  cursor: pointer;
+  background-image: url("../../../images/delete-hover.svg");
+}
+
+@media screen and (min-width: 760px) and (max-width: 1023px) {
+  .article__delete {
+    right: 8px;
+    top: 8px;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .article__delete {
+    right: 16px;
+    top: 16px;
+  }
+}

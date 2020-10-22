@@ -1,0 +1,12 @@
+.loading-block__title {
+  font-size: 22px;
+  line-height: 24px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .loading-block__title {
+    font-size: 26px;
+    line-height: 30px;
+  }
+}

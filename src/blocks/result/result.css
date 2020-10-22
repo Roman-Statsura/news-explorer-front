@@ -1,0 +1,13 @@
+@import url('./__title/result__title.css');
+@import url('./_container/result_container.css');
+@import url('./__articles/result__articles.css');
+@import url('./__button/result__button.css');
+@import url('./_container-articles/result_container-articles.css');
+
+.result{
+  max-width: 1440px;
+  background-color: #F5F6F7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

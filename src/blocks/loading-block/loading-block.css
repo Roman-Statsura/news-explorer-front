@@ -1,0 +1,11 @@
+@import url(../loading-block/__container/loading-block__container.css);
+@import url(../loading-block/__image/loading-block__image.css);
+@import url(../loading-block/__preloader/loading-block__preloader.css);
+@import url(../loading-block/__text/loading-block__text.css);
+@import url(../loading-block/__title/loading-block__title.css);
+
+.loading-block {
+  background-color: #F5F6F7;
+  text-align: center;
+  min-height: 150px;
+}

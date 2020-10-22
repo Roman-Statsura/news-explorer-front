@@ -1,0 +1,32 @@
+@import url('./__item/article__item.css');
+@import url('./__image/article__image.css');
+@import url('./__login/article__login.css');
+@import url('./__icon/article__icon.css');
+@import url('./__date/article__date.css');
+@import url('./__title/article__title.css');
+@import url('./__text/article__text.css');
+@import url('./__sourse/article__source.css');
+@import url('./__label/article__label.css');
+@import url('./__delete/article__delete.css');
+
+.article{
+  position: relative;
+  background-color: #fff;
+  border-radius: 16px;
+  box-sizing: border-box;
+  z-index: 2;
+  padding-bottom: 24px;
+  max-width: 400px;
+}
+
+@media screen  and (min-width: 760px) and (max-width: 1023px){
+  .article{
+      padding-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 759px){
+  .article{
+      padding-bottom: 16px;
+  }
+}

@@ -1,0 +1,13 @@
+@import url('./_margin/logo_margin.css');
+@import url('./__text/logo__text.css');
+@import url('./__text/_black/logo__text_black.css');
+
+.logo{
+  font-family: Roboto Slab, Inter, sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 24px;
+  color: white;
+  margin-top: 0px;
+  box-sizing: border-box;
+}

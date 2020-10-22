@@ -1,0 +1,17 @@
+.popup__content {
+  width: 768px;
+  background-color: #fff;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  position: relative;
+  box-sizing: border-box;
+  padding: 16px 17px;
+}
+
+@media screen and (min-width: 534px) {
+  .popup__content {
+    width: 430px;
+    border-radius: 16px;
+    padding: 34px 36px 28px;
+  }
+}
